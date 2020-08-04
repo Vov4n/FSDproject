@@ -2,12 +2,14 @@
   "name": "fsd",
   "version": "1.0.0",
   "description": "fsd webpack",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "watch": "webpack --mode development --watch"
+    "watch": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development --open"
   },
+  "browserslist": "> 0.25%, not dead",
   "keywords": [
     "js",
     "webpack",
@@ -16,15 +18,28 @@
   "author": "Vladimir <vovan-m@yandex.ru>",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1",
     "resolve-url": "^0.2.1",
     "urix": "^0.1.0",
     "watchpack": "^1.7.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^4.2.0",
+    "eslint": "^7.6.0",
+    "eslint-loader": "^4.0.2",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.2",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
